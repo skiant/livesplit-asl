@@ -1,6 +1,18 @@
 // asl-help by ero (https://github.com/just-ero/asl-help/)
 // Prior art by Biksel (https://github.com/Biksell/asl/blob/main/SWORN/SWORN.asl)
 
+state("Sworn", "v0.51.2.0.613") {
+  float GameTime: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x1F8, 0x20, 0x90, 0x68;
+  bool GameTimeCounting: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x1F8, 0x20, 0x90, 0x6C;
+  int BiomeRoomIndex: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x68, 0xEC;
+  int RoomIndex: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x68, 0xE8;
+  int BiomeIndex: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x68, 0xF0;
+  int LevelManagerCurrentState: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x100, 0xB8;
+  int RoundTableCurrentRound: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x100, 0x170;
+  bool IsInRun: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x142;
+  bool IsLobby: "GameAssembly.dll", 0x05074F30, 0x128, 0x0, 0x143;
+}
+
 state("Sworn", "v0.51.1.1.593") {
   float GameTime: "GameAssembly.dll", 0x050E0AC8, 0x140, 0x0, 0x68;
   bool GameTimeCounting: "GameAssembly.dll", 0x050E0AC8, 0x140, 0x0, 0x6C;
@@ -20,6 +32,9 @@ startup {
 }
 
 init {
+  // Manually setting the version number until I figure out how to automate it
+  version = "v0.51.2.0.613";
+
   vars.bossArenas = new List<string>() {
     "b370d40fbca123841b3ceea0a5a16186", //"Kingswood - Bane Of Crows Arena (level scene)", //
     "85d9faf8534a99048b624a6dfd9caf67", //"Kingswood - Questing Beast Arena (level scene)", //
