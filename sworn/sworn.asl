@@ -119,7 +119,7 @@ split {
 }
 
 reset {
-  return settings["reset"] && old.activeScene != current.activeScene && current.activeScene == "3e46d34be382e6f40999ce606619fde5";
+  return old.activeScene != current.activeScene && current.activeScene == "3e46d34be382e6f40999ce606619fde5";
 }
 
 isLoading {
