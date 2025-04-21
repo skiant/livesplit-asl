@@ -1,6 +1,6 @@
 # Sworn ASL script
 
-Current Splits:
+## Current Splits:
 
 - Major Foes (mid-biome bosses)
 - Bosses (End of biome, Arthur & Morgana)
